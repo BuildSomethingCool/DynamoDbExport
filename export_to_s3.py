@@ -11,7 +11,7 @@ if __name__ == '__main__':
     data = scan_table(table_name)
     columns = data[0].keys()
     out_filename = util.export_to_csv(csv_name, columns, data)
-    r = util.put_to_s3(out_filename, csv_name, 'raw-tweets-3082')
+    r = util.put_to_s3(out_filename, csv_name, dest_bucket)
     print(r)
 
 
