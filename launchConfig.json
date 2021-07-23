@@ -1,0 +1,36 @@
+{
+   "capacityProviderStrategy": [
+      {
+         "capacityProvider": "FARGATE_SPOT",
+         "weight": 1,
+         "base": 0
+      }
+   ],
+   "cluster": "twitterIngest",
+   "count": 1,
+   "enableECSManagedTags": true,
+   "networkConfiguration": {
+      "awsvpcConfiguration": {
+         "assignPublicIp": "ENABLED",
+         "securityGroups": [
+            "sg-826631fd"
+         ],
+         "subnets": [
+            "subnet-07afa47d"
+         ]
+      }
+   },
+   "overrides": {},
+   "platformVersion": "LATEST",
+   "tags": [
+      {
+         "key": "owner",
+         "value": "mikebrumfield30@gmail.com"
+      },
+      {
+         "key": "Project",
+         "value": "Twitter Stream"
+      }
+   ],
+   "taskDefinition": "export_raw_index:1"
+}
