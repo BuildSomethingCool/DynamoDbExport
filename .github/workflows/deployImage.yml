@@ -41,7 +41,7 @@ jobs:
           ECR_REPOSITORY: dynamodb_export
           IMAGE_TAG: ${{ github.sha }}
         with:
-          registries |
+          registries: |
             - ${{ secrets.AWS_ACCOUNT_ID }}
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
