@@ -20,7 +20,23 @@
          ]
       }
    },
-   "overrides": {},
+   "overrides": {
+      "containerOverrides": [
+         {
+            "name": "export_raw_index",
+            "environment": [
+               {
+                  "name": "SRC_TABLE",
+                  "value": ""
+               },
+               {
+                  "name": "SRC_TABLE",
+                  "value": "DEST_BUCKET_NAME"
+               }
+            ]
+         }
+      ]
+   },
    "platformVersion": "LATEST",
    "tags": [
       {
