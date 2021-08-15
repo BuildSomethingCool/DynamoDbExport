@@ -1,6 +1,7 @@
 import csv
 import traceback
 
+raw_folder = 'twitter_streaming_project/data/raw'
 
 def export_to_csv(csv_name, headers, data):
     try:
@@ -27,7 +28,7 @@ def put_to_s3(filename, shortname, bucket_name):
             response = bucket.put_object(
                 ACL='private',
                 Body=open(filename, 'rb').read(),
-                Key=f"raw/{shortname}"
+                Key=f"{raw_folder}/{shortname}"
             )
             return response
     except Exception as e:

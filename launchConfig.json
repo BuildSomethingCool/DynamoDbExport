@@ -31,7 +31,11 @@
                },
                {
                   "name": "SRC_TABLE",
-                  "value": "DEST_BUCKET_NAME"
+                  "value": ""
+               },
+               {
+                  "name": "INPUT_STORE",
+                  "value": "env"
                }
             ]
          }
