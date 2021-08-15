@@ -30,7 +30,7 @@
                   "value": ""
                },
                {
-                  "name": "SRC_TABLE",
+                  "name": "DEST_BUCKET_NAME",
                   "value": ""
                },
                {
