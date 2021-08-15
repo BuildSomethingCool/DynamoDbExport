@@ -20,7 +20,27 @@
          ]
       }
    },
-   "overrides": {},
+   "overrides": {
+      "containerOverrides": [
+         {
+            "name": "export_raw_index",
+            "environment": [
+               {
+                  "name": "SRC_TABLE",
+                  "value": ""
+               },
+               {
+                  "name": "SRC_TABLE",
+                  "value": ""
+               },
+               {
+                  "name": "INPUT_STORE",
+                  "value": "env"
+               }
+            ]
+         }
+      ]
+   },
    "platformVersion": "LATEST",
    "tags": [
       {

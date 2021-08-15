@@ -6,5 +6,6 @@ COPY requirements.txt .
 COPY dynamo.py .
 COPY export_to_s3.py .
 COPY util.py .
+COPY sqs.py .
 RUN pip3 install -r requirements.txt
 ENTRYPOINT ["python3",  "export_to_s3.py"]
