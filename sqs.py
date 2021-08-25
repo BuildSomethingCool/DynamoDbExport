@@ -6,7 +6,8 @@ queue_name = "twitter_queue.fifo"
 
 def read_input_variables():
     client = boto3.client('sqs')
-    queues = client.list_queues()['QueueUrls']
+    q_response = client.list_queues()
+    queues = q_response['QueueUrls']
     queue_url = ''
     for _ in queues:
         if queue_name in _:
@@ -18,7 +19,7 @@ def read_input_variables():
         WaitTimeSeconds=10
     )
     json_resp = json.loads(response['Messages'][0]['Body'])
-    table_name = json['table_name']
-    s3_bucket_name = json['s3_bucket_name']
+    table_name = json_resp['table_name']
+    s3_bucket_name = json_resp['s3_bucket_name']
 
     return table_name, s3_bucket_name
