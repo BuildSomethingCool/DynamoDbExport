@@ -20,6 +20,6 @@ def read_input_variables():
     )
     json_resp = json.loads(response['Messages'][0]['Body'])
     table_name = json_resp['table_name']
-    s3_bucket_name = json['s3_bucket_name']
+    s3_bucket_name = json_resp['s3_bucket_name']
 
     return table_name, s3_bucket_name
